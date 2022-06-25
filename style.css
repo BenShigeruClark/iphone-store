@@ -7,6 +7,16 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+a, 
+button, 
+h1, 
+h2,
+h3, 
+h4 {
+    color: rgb(40, 40, 40);
+}
+
 /* Nav Bar */
 nav {
     position: fixed;
@@ -36,6 +46,16 @@ nav, a {
     font-weight: bold;
 }
 
+.buy-button {
+    padding: 0.3rem 2rem;
+    font-size: 0.7rem;
+    color: white;
+    background: #3056f5;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
 /* First Page */
 .first-page {
     min-height: 100vh;
@@ -50,6 +70,14 @@ nav, a {
     z-index: 2;
     text-align: center;
     padding-bottom: 10rem;
+}
+
+.first-page-title {
+    font-size: 1.75rem;
+}
+
+.first-page-subtitle {
+    font-size: 3rem;
 }
 
 .intro-video {
