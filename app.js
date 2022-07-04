@@ -9,6 +9,17 @@
 
 // tlIntro.fromTo('nav', {opacity: 1}, {opacity: 0})
 
+// Pin the first page
+const tlIntro = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".first-page",
+        start: "0%",
+        end: "100%",
+        pin: true,
+        pinSpacing: false,
+    }
+}); 
+
 // Highlight Page 2
 const tlH = gsap.timeline({
     scrollTrigger: {
