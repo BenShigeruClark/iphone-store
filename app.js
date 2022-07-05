@@ -52,3 +52,20 @@ tlHRemove.fromTo(
     {color: "rgba(255,255,255,1"},
     {color: "rgba(255,255,255,0", stagger: 1}
 );
+
+// Page 3
+const tlSplit = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".third-page",
+        start: "-25%",
+        end: "30%",
+        markers: true,
+        scrub: true,
+
+    }
+});
+
+tlSplit.fromTo(".large-phone", { x: "40%"}, { x: "20%"});
+tlSplit.fromTo(".small-phone", {x: "-40%"}, { x: "-20%"}, "<");
+tlSplit.fromTo(".product-text-left", { x: 50, opacity: 0 }, { opacity: 1, x: 0 }, "<");
+tlSplit.fromTo(".product-text-right", { x: -50, opacity: 0 }, { opacity: 1, x: 0 }, "<");
