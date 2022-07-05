@@ -266,6 +266,10 @@ nav, a {
     color: rgb(192, 192, 192);
 }
 
+.blue {
+    z-index: 1;
+}
+
 /* Sixth Page */
 .sixth-page {
     min-height: 100vh;

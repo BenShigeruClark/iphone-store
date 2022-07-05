@@ -79,3 +79,30 @@ const tlSplitPin = gsap.timeline({
         end: "100%",
     }
 });
+
+// Carousel
+const swatches = document.querySelectorAll(".swatches img");
+const gallery = document.querySelector(".phone-gallery");
+const slides = document.querySelectorAll(".phone-gallery-container");
+
+let currentSwatch = "blue";
+let topIndex = 2;
+
+swatches.forEach((swatch, index) => {
+    const coord = slides[index].getBoundingClientRect().left;
+    swatch.addEventListener("click", (e) => {
+        let swatchName = e.target.getAttribute("swatch");
+        let closeUp = document.querySelector("." + swatchName);
+        // check if we are on the same swatch
+        if(currentSwatch === swatchName) return;
+
+        gsap.set(closeUp, { zIndex: topIndex })
+        gsap.fromTo(closeUp, { opacity: 0 }, { opacity: 1, duration: 1 });
+
+        // Gallery
+        gsap.to(gallery, { x: -coord, duration: 1, ease: "back.out(1)"});
+        // Increment zIndex
+        topIndex++;
+        currentSwatch = swatchName;
+    });
+});
