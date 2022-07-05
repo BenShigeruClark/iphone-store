@@ -178,6 +178,7 @@ nav, a {
     overflow: hidden;
     align-items: center;
     justify-content: center;
+    background: white;
     flex: 1;
 }
 
