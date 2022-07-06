@@ -106,3 +106,15 @@ swatches.forEach((swatch, index) => {
         currentSwatch = swatchName;
     });
 });
+
+// Page 5 video on scroll
+const tlVideo = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".fifth-page",
+        start: "-20%",
+        end: "100%",
+        scrub: true,
+    },
+});
+
+tlVideo.fromTo('.product-video', {currentTime: 0}, {currentTime: 3});
